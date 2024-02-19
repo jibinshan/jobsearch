@@ -13,12 +13,11 @@ function Container() {
           cardarray.length > 0 &&
         cardarray.map((card)=>{
             return(
-                <div key={card.id} className='h-[200px] w-[200px] bg-slate-400 flex flex-col' style={{ color: card.color }}>
+                <div key={card.id} className='bg-slate-400 flex rounded-lg p-4 justify-center items-center gap-[15px]' style={{ color: card.color }}>
+                     <p className='text-center font-semibold text-xl'>{card.title}</p>
                     <div onClick={()=>deletecard(card.id)}>
-                         <IoMdClose className='text-lg ml-[170px] mt-[10px] text-black' />
+                         <IoMdClose className='text-md text-black' />
                     </div>
-                     <p className='text-center font-bold text-2xl'>{card.type}</p>
-                     <p className='text-center mt-[40px]'>{card.title}</p>
                 </div>
             )
         })
